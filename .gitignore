@@ -1,0 +1,5 @@
+**/.terragrunt.lock.hcl
+**/.terragrunt-cache
+set_env.py
+**/.decrypted~config.yaml
+**/.terraform.lock.hcl
