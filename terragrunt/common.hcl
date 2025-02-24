@@ -10,7 +10,7 @@ locals {
 generate "backend" {
     path        = "backend.tf"
     if_exists   = "overwrite_terragrunt"
-    contents    = templatefile("s3_backend.tpl", {
+    contents    = templatefile("templates/s3_backend.tpl", {
         bucket      = local.tf_backend.bucket
         region      = local.tf_backend.region
         key         = "${basename(get_terragrunt_dir())}/terraform.tfstate"
