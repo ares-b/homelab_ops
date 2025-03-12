@@ -1,0 +1,13 @@
+---
+- name: Configure Host
+  gather_facts: true
+  hosts: all
+  vars:
+    certbot_repo: https://github.com/certbot/certbot.git
+    certbot_version: master
+    certbot_keep_updated: true
+    certbot_auto_renew_minute: "0"
+    certbot_auto_renew_hour: "0"
+  tasks:
+    roles:
+      - geerlingguy.certbot
